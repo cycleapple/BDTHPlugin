@@ -47,10 +47,10 @@ namespace BDTHPlugin.Interface.Components
           DrawDragCoord("##bdth-xdrag", ref Memory.position.X);
           DrawDragCoord("##bdth-ydrag", ref Memory.position.Y);
           DrawDragCoord("##bdth-zdrag", ref Memory.position.Z);
-          ImGui.Text("position");
+          ImGui.Text("位置");
 
           DrawDragRotate("##bdth-rydrag", ref Memory.rotation.Y);
-          ImGui.Text("rotation");
+          ImGui.Text("旋轉");
         }
         ImGui.PopItemWidth();
       }
@@ -59,8 +59,8 @@ namespace BDTHPlugin.Interface.Components
       if (ImGui.IsItemHovered())
       {
         ImGui.BeginTooltip();
-        ImGui.Text("Click and drag each to move the selected item.");
-        ImGui.Text("Change the drag option below to influence how much it moves as you drag.");
+        ImGui.Text("點擊並拖曳各欄位以移動所選家具。");
+        ImGui.Text("調整下方的拖曳間距，可改變每次拖曳的移動量。");
         ImGui.EndTooltip();
       }
 
@@ -73,7 +73,7 @@ namespace BDTHPlugin.Interface.Components
           copyRotation = Memory.rotation.Y;
         }
         if (ImGui.IsItemHovered())
-          ImGui.SetTooltip("Copy Position & Rotation");
+          ImGui.SetTooltip("複製位置與旋轉角度");
 
         ImGui.BeginDisabled(copyPosition == null || copyRotation == null);
         {
@@ -83,7 +83,7 @@ namespace BDTHPlugin.Interface.Components
             Memory.WriteRotation(Memory.rotation with { Y = copyRotation.Value });
           }
           if (ImGui.IsItemHovered())
-            ImGui.SetTooltip("Paste Position & Rotation");
+            ImGui.SetTooltip("貼上位置與旋轉角度");
         }
         ImGui.EndDisabled();
       }

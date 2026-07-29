@@ -39,7 +39,7 @@ namespace BDTHPlugin.Interface.Windows
       };
 
       var sortByDistance = Configuration.SortByDistance;
-      if (ImGui.Checkbox("Sort by distance", ref sortByDistance))
+      if (ImGui.Checkbox("依距離排序##Sort by distance", ref sortByDistance))
       {
         Configuration.SortByDistance = sortByDistance;
         Configuration.Save();
@@ -60,9 +60,9 @@ namespace BDTHPlugin.Interface.Windows
 
       if (ImGui.BeginTable("FurnishingListItems", 3))
       {
-        ImGui.TableSetupColumn("Icon", ImGuiTableColumnFlags.WidthFixed, 0f);
-        ImGui.TableSetupColumn("Name", ImGuiTableColumnFlags.WidthStretch, 0f);
-        ImGui.TableSetupColumn("Distance", ImGuiTableColumnFlags.WidthFixed, 0f);
+        ImGui.TableSetupColumn("圖示", ImGuiTableColumnFlags.WidthFixed, 0f);
+        ImGui.TableSetupColumn("名稱", ImGuiTableColumnFlags.WidthStretch, 0f);
+        ImGui.TableSetupColumn("距離", ImGuiTableColumnFlags.WidthFixed, 0f);
 
         try
         {

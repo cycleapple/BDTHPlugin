@@ -153,7 +153,7 @@ namespace BDTHPlugin
             // Only allow furnishing list when the housing window is open.
             if (!Memory.IsHousingOpen())
             {
-              Chat.PrintError("Cannot open furnishing list unless housing menu is open.");
+              Chat.PrintError("必須先開啟房屋布置選單，才能開啟家具清單。");
               Ui.Furniture.IsOpen = false;
               return;
             }
@@ -161,7 +161,7 @@ namespace BDTHPlugin
             // Disallow the ability to open furnishing list outdoors.
             if (IsOutdoors())
             {
-              Chat.PrintError("Cannot open furnishing outdoors currently.");
+              Chat.PrintError("目前無法在戶外開啟家具清單。");
               Ui.Furniture.IsOpen = false;
               return;
             }
