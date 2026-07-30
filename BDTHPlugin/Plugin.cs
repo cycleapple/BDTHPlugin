@@ -53,7 +53,7 @@ namespace BDTHPlugin
 
       CommandManager.AddHandler(commandName, new CommandInfo(OnCommand)
       {
-        HelpMessage = "Opens the controls for Burning Down the House plugin."
+        HelpMessage = "開啟 Burning Down the House 控制面板。"
       });
 
       // Set the ImGui context 

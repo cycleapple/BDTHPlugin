@@ -90,10 +90,10 @@ namespace BDTHPlugin.Interface.Components
 
       ImGui.EndGroup();
 
-      DrawInputCoord("x coord##bdth-x", ref Memory.position.X, ref lockX, RED);
-      DrawInputCoord("y coord##bdth-y", ref Memory.position.Y, ref lockY, GREEN);
-      DrawInputCoord("z coord##bdth-z", ref Memory.position.Z, ref lockZ, BLUE);
-      DrawInputRotate("ry degree##bdth-ry", ref Memory.rotation.Y);
+      DrawInputCoord("X 座標##bdth-x", ref Memory.position.X, ref lockX, RED);
+      DrawInputCoord("Y 座標##bdth-y", ref Memory.position.Y, ref lockY, GREEN);
+      DrawInputCoord("Z 座標##bdth-z", ref Memory.position.Z, ref lockZ, BLUE);
+      DrawInputRotate("Y 軸旋轉角度##bdth-ry", ref Memory.rotation.Y);
     }
 
     private void HandleScrollInput(ref float f)

@@ -15,7 +15,7 @@ namespace BDTHPlugin.Interface.Windows
     private ulong? lastActiveItem;
     private byte renderCount;
 
-    public FurnitureList() : base("Furnishing List")
+    public FurnitureList() : base("家具清單")
     {
 
     }
